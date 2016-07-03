@@ -28,7 +28,7 @@ class Router
             if (is_dir($dir)) {
                 if ($dh = opendir($dir)) {
                     while (($file = readdir($dh)) !== false) {
-                        if(end(explode('.', $file)) == 'php'){
+                        if( substr(strrchr($file, '.'), 1) == 'php'){
                             include $dir . $file;
                         }
                     }
