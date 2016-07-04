@@ -54,7 +54,7 @@ class Router
 
         $controller_map = DEFAULT_CONTROLLER_MAP;
         $action_name = 'index';
-        $routes = explode('/', $this->request_uri);
+        $routes = explode('/', explode('?', $this->request_uri)[0]);
         if (!empty($routes[1]))
         {
             $controller_map = $routes[1];
