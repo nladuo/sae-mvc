@@ -18,7 +18,7 @@ class Model
 
     function __construct()
     {
-        $this->db = new \MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
+        $this->db = new \MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME, DBPORT);
     }
 
 }
